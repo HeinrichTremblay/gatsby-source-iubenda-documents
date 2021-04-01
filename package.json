@@ -29,10 +29,10 @@
   "peerDependencies": {
     "gatsby": ">3.0.0"
   },
+   "release": {
+    "branches": ["main"]
+  },
   "publishConfig": {
-    "access": "public",
-    "branches": [
-      "main"
-    ]
+    "access": "public"
   }
 }
