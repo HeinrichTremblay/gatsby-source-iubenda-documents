@@ -1,5 +1,8 @@
 # Gatsby Source Iubenda Documents
 
+![npm](https://img.shields.io/npm/v/gatsby-source-iubenda-documents)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+
 Source plugin for pulling in Iubenda documents for Gatsby. (Privacy policy, terms and conditions)
 
 ## 🚀 Install
