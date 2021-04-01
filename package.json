@@ -2,11 +2,9 @@
   "name": "gatsby-source-iubenda-documents",
   "version": "0.0.0",
   "description": "Gatsby plugin for Iubenda Privacy Policy and Terms & Conditions",
-  "main": "index.js",
-  "scripts": {
-    "build": "babel src --out-dir . --ignore **/__tests__",
-    "watch": "babel -w src --out-dir . --ignore **/__tests__",
-    "prepare": "cross-env NODE_ENV=production npm run build"
+  "repository": "https://github.com/HeinrichTremblay/gatsby-source-iubenda-documents",
+  "bugs": {
+    "url": "https://github.com/HeinrichTremblay/gatsby-source-iubenda-documents/issues"
   },
   "keywords": [
     "gatsby",
@@ -15,6 +13,12 @@
   ],
   "author": "Heinrich Tremblay <info@hanpath.com>",
   "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir . --ignore **/__tests__",
+    "watch": "babel -w src --out-dir . --ignore **/__tests__",
+    "prepare": "cross-env NODE_ENV=production npm run build"
+  },
   "dependencies": {
     "@babel/runtime": "^7.13.10",
     "node-fetch": "^2.6.1"
