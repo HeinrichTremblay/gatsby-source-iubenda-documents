@@ -60,7 +60,8 @@ exports.sourceNodes = async (
     documentIds.map(async (documentId) => {
       const data = {
         privacyPolicy: null,
-        termsAndConditions: null,
+        cookiePolicy: null,
+        termsAndConditions: null
       };
 
       try {
@@ -69,6 +70,14 @@ exports.sourceNodes = async (
         logFetchSuccess("Privacy Policy", documentId);
       } catch (error) {
         handleError(error, "Privacy Policy", documentId);
+      }
+
+      try {
+        const document = await fetchDocument(PRIVACY_URL + documentId + "/cookie-policy");
+        data.cookiePolicy = document;
+        logFetchSuccess("Cookie Policy", documentId);
+      } catch (error) {
+        handleError(error, "Cookie Policy", documentId);
       }
 
       try {
