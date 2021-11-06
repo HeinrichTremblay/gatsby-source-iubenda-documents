@@ -3,7 +3,7 @@
 [![npm](https://img.shields.io/npm/v/gatsby-source-iubenda-documents)](https://www.npmjs.com/package/gatsby-source-iubenda-documents)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
-Source plugin for pulling in Iubenda documents for Gatsby. (Privacy Policy, Terms and Conditions)
+Source plugin for pulling in Iubenda documents for Gatsby. (Privacy Policy, Cookie Policy,Terms and Conditions)
 
 ## 🚀 Install
 
@@ -44,13 +44,14 @@ plugins: [
 ];
 ```
 
-Your privacy policy and terms will be available in graphql:
+Your privacy policy, cookie policy and terms will be available in graphql:
 
 ```
 // With one document
 query MyQuery {
   iubendaDocument {
     termsAndConditions
+    cookiePolicy
     privacyPolicy
   }
 }
@@ -60,6 +61,7 @@ query MyQuery {
   iubendaDocument(documentId: {eq: "<your-document-id>"}) {
     documentId
     privacyPolicy
+    cookiePolicy
     termsAndConditions
   }
 }
@@ -71,6 +73,7 @@ query MyQuery {
     nodes {
       documentId
       privacyPolicy
+      cookiePolicy
       termsAndConditions
     }
   }
